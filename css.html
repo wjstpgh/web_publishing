@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    p {
+      text-align: center;
+      color: red;
+    }
+    p.class {
+      text-align: right;
+      color: blue;
+    }
+    #id {
+      text-align: left;
+      color: green;
+    }
+    h1,
+    div {
+      font-size: 30px;
+    }
+    div b {
+      color: brown;
+    }
+
+    li {
+      color: red !important;
+    }
+    .text {
+      color: blue;
+    }
+    #text {
+      color: green;
+    }
+  </style>
+  <body>
+    <p>문단1</p>
+    <p class="class">문단2</p>
+    <p id="id">문단3</p>
+    <div class="class">div<b>굵은글씨</b></div>
+    <h1>h1과 div는 그룹선택자로 폰트사이즈 지정</h1>
+
+    <ul>
+      <li>태그</li>
+      <li class="text">클래스</li>
+      <li class="text" id="text">아이디</li>
+      <li class="text" id="text" style="color: gold">인라인</li>
+      <li>!important</li>
+    </ul>
+  </body>
+</html>
