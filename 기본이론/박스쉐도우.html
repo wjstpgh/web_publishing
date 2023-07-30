@@ -5,6 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style></style>
-  <body></body>
+  <style>
+    div {
+      background-color: #ccc;
+      width: 250px;
+      height: 200px;
+      margin: 10px;
+      border-radius: 5px;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box1 {
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    .box2 {
+      box-shadow: 0 0 40px rgba(30, 144, 255, 0.5);
+    }
+    .box3 {
+      box-shadow: 10px 10px crimson;
+    }
+    .box4 {
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    .box5 {
+      box-shadow: inset 40px 10px 20px rgba(255, 255, 255, 0.9);
+    }
+    .box6 {
+      box-shadow: inset 0 0 100px #000;
+    }
+    .textbox {
+      width: 90vw;
+      background-color: #000;
+      font-size: 150px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 0 0 5px rgba(255, 215, 0, 1), 0 0 10px rgba(255, 215, 0, 0.9),
+        0 0 15px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.7),
+        0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.5),
+        0 0 60px rgba(255, 215, 0, 0.4), 0 0 80px rgba(255, 215, 0, 0.3);
+    }
+    .textshadow {
+      font-size: 50px;
+      color: gold;
+      text-shadow: 5px 5px 2px dodgerblue,
+        10px 10px 2px rgba(39, 112, 186, 0.623);
+    }
+  </style>
+  <body>
+    <div class="box1">5px 5px 20px rgba(0, 0, 0, 0.2)</div>
+    <div class="box2">0 0 20px rgba(30, 144, 255, 0.4)</div>
+    <div class="box3">10px 10px crimson</div>
+    <div class="box4">inset 0 0 20px rgba(0, 0, 0, 0.2)</div>
+    <div class="box5">inset 40px 10px 20px rgba(255, 255, 255, 0.9)</div>
+    <div class="box6">inset 0 0 100px #000</div>
+    <div class="textshadow">text shadow</div>
+    <div class="textbox">네온사인</div>
+  </body>
 </html>
