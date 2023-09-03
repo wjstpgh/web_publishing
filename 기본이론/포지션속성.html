@@ -21,10 +21,45 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    .par {
+      position: relative;
+      border: 5px solid red;
+      width: 600px;
+      height: 300px;
+    }
+    .ch1 {
+      position: absolute;
+      background-color: navy;
+      width: 150px;
+      height: 100px;
+      left: 0;
+      top: 100%;
+    }
+    .ch2 {
+      position: absolute;
+      background-color: navy;
+      width: 150px;
+      height: 100px;
+      left: 100%;
+      top: 0;
+    }
+    .ch3 {
+      position: absolute;
+      background-color: navy;
+      width: 150px;
+      height: 100px;
+      left: 100%;
+      top: 100%;
+    }
   </style>
   <body>
     <div class="parent">
       <div class="child"></div>
+    </div>
+    <div class="par">
+      <div class="ch1"></div>
+      <div class="ch2"></div>
+      <div class="ch3"></div>
     </div>
   </body>
 </html>
