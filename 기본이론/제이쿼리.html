@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+  <body>
+    <a class="show" href="#none">보이기</a>
+    <a class="hide" href="#none">감추기</a>
+    <p>태그선택자 a를 클릭했슴</p>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script>
+      $("p").css({ display: "none" });
+      $(".show").click(function () {
+        $("p").css({ display: "block" });
+      });
+      $(".hide").click(function () {
+        $("p").css({ display: "none" });
+      });
+    </script>
+  </body>
+</html>
