@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style></style>
+  <style>
+    a {
+      display: inline-block;
+      color: #000;
+      text-decoration: none;
+      background-color: #ddd;
+      width: 100px;
+      text-align: center;
+      padding: 5px;
+    }
+    div {
+      background-color: dodgerblue;
+      height: 200px;
+      margin-top: 10px;
+      width: 230px;
+      color: #fff;
+      text-align: center;
+      line-height: 200px;
+      display: none;
+    }
+  </style>
   <body>
     <a class="show" href="#none">보이기</a>
     <a class="hide" href="#none">감추기</a>
-    <p>태그선택자 a를 클릭했슴</p>
+    <div>Box</div>
     <script src="script/jquery-1.12.4.js"></script>
     <script>
-      $("p").css({ display: "none" });
       $(".show").click(function () {
-        $("p").css({ display: "block" });
+        $("div").show();
       });
       $(".hide").click(function () {
-        $("p").css({ display: "none" });
+        $("div").hide();
       });
     </script>
   </body>
