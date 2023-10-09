@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 300px;
+    }
+    a {
+      background-color: #ddd;
+      color: #000;
+      text-decoration: none;
+      padding: 5px;
+      width: 70px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .container div {
+      background-color: dodgerblue;
+      width: 250px;
+      height: 300px;
+      margin-top: 10px;
+      color: #fff;
+      text-align: center;
+      line-height: 300px;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <a class="show-btn" href="#none">보이기</a>
+      <a class="hide-btn" href="#none">감추기</a>
+      <a class="toggle-btn" href="#none">토글</a>
+      <div>box</div>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script>
+      $(".show-btn").click(function () {
+        $(".container div").slideDown("fast");
+      });
+      $(".hide-btn").click(function () {
+        $(".container div").slideUp("slow");
+      });
+      $(".toggle-btn").click(function () {
+        $(".container div").fadeToggle(2000);
+      });
+    </script>
+  </body>
+</html>
