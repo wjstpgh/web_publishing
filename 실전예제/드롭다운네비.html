@@ -5,8 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style></style>
+  <style>
+    body {
+      color: #222;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    .dropdown {
+      display: inline-block;
+    }
+    .dropdown-btn {
+      width: 200px;
+      padding: 10px;
+      font-size: 18px;
+      background-color: yellowgreen;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .dropdown-submenu {
+      display: none;
+      width: 200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+    }
+    .dropdown-submenu a {
+      display: block;
+      padding: 7px;
+      text-align: center;
+    }
+    .dropdown-submenu a:hover {
+      background-color: #eee;
+    }
+    .dropdown:hover .dropdown-submenu {
+      display: block;
+    }
+  </style>
   <body>
+    <div class="dropdown">
+      <button class="dropdown-btn">Button</button>
+      <div class="dropdown-submenu">
+        <a href="#none">menu1</a>
+        <a href="#none">menu2</a>
+        <a href="#none">menu3</a>
+        <a href="#none">menu4</a>
+        <a href="#none">menu5</a>
+        <a href="#none">menu6</a>
+        <a href="#none">menu7</a>
+      </div>
+    </div>
     <script src="script/jquery-1.12.4.js"></script>
     <script></script>
   </body>
