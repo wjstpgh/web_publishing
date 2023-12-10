@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/77ad8525ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    .item {
+      width: 300px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .item input[type="text"],
+    .item input[type="email"],
+    .item input[type="tel"] {
+      border: 1px solid lightgray;
+      height: 40px;
+      width: inherit;
+      border-radius: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+      padding-left: 40px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .item .fa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: gray;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      transition: 0.3s;
+    }
+    .item input:focus {
+      border: 1px solid dodgerblue;
+      box-shadow: 0 0 5px dodgerblue;
+    }
+    .item input:focus + .fa {
+      color: dodgerblue;
+    }
+    .item input:focus::placeholder {
+      visibility: hidden;
+    }
+  </style>
+  <body>
+    <form class="info">
+      <div class="item">
+        <input type="text" placeholder="Name" />
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="item">
+        <input type="email" placeholder="Email" />
+        <i class="fa fa-envelope"></i>
+      </div>
+      <div class="item">
+        <input type="tel" placeholder="Phone" />
+        <i class="fa fa-phone"></i>
+      </div>
+    </form>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
