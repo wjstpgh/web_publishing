@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .tab-inner {
+      width: 300px;
+      height: 330px;
+      position: relative;
+    }
+    input[name="tabmenu"] {
+      display: none;
+    }
+    .content {
+      display: none;
+    }
+    .btn {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
+    }
+    .btn label {
+      background-color: lightgray;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    input[id="tab1"]:checked ~ .slide1,
+    input[id="tab2"]:checked ~ .slide2,
+    input[id="tab3"]:checked ~ .slide3 {
+      display: block;
+    }
+    input[id="tab1"]:checked ~ .btn label[for="tab1"],
+    input[id="tab2"]:checked ~ .btn label[for="tab2"],
+    input[id="tab3"]:checked ~ .btn label[for="tab3"] {
+      background-color: crimson;
+    }
+  </style>
+  <body>
+    <div class="tab-inner">
+      <input type="radio" name="tabmenu" id="tab1" checked />
+      <input type="radio" name="tabmenu" id="tab2" />
+      <input type="radio" name="tabmenu" id="tab3" />
+      <div class="content slide1">
+        <img src="http://placekitten.com/200/200" alt="kitty" />
+      </div>
+      <div class="content slide2">
+        <img src="http://placekitten.com/400/400" alt="kitty" />
+      </div>
+      <div class="content slide3">
+        <img src="http://placekitten.com/300/300" alt="kitty" />
+      </div>
+      <div class="btn">
+        <label for="tab1"></label>
+        <label for="tab2"></label>
+        <label for="tab3"></label>
+      </div>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
