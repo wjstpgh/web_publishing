@@ -30,7 +30,13 @@
       display: none;
     }
     .content {
-      display: none;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: 1s;
     }
     .btn {
       position: absolute;
@@ -49,7 +55,8 @@
     input[id="tab1"]:checked ~ .slide1,
     input[id="tab2"]:checked ~ .slide2,
     input[id="tab3"]:checked ~ .slide3 {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
     input[id="tab1"]:checked ~ .btn label[for="tab1"],
     input[id="tab2"]:checked ~ .btn label[for="tab2"],
@@ -63,13 +70,19 @@
       <input type="radio" name="tabmenu" id="tab2" />
       <input type="radio" name="tabmenu" id="tab3" />
       <div class="content slide1">
-        <img src="http://placekitten.com/200/200" alt="kitty" />
+        <a href="#none1">
+          <img src="http://placekitten.com/200/200" alt="kitty" />
+        </a>
       </div>
       <div class="content slide2">
-        <img src="http://placekitten.com/400/400" alt="kitty" />
+        <a href="#none2">
+          <img src="http://placekitten.com/400/400" alt="kitty" />
+        </a>
       </div>
       <div class="content slide3">
-        <img src="http://placekitten.com/300/300" alt="kitty" />
+        <a href="#none3">
+          <img src="http://placekitten.com/300/300" alt="kitty" />
+        </a>
       </div>
       <div class="btn">
         <label for="tab1"></label>
