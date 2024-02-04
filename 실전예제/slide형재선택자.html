@@ -25,6 +25,7 @@
       width: 300px;
       height: 330px;
       position: relative;
+      overflow: hidden;
     }
     input[name="tabmenu"] {
       display: none;
@@ -33,7 +34,7 @@
       position: absolute;
       width: 100%;
       top: 0;
-      left: 0;
+      left: -50px;
       opacity: 0;
       visibility: hidden;
       transition: 1s;
@@ -56,12 +57,53 @@
     input[id="tab2"]:checked ~ .slide2,
     input[id="tab3"]:checked ~ .slide3 {
       opacity: 1;
+      left: 0;
       visibility: visible;
     }
     input[id="tab1"]:checked ~ .btn label[for="tab1"],
     input[id="tab2"]:checked ~ .btn label[for="tab2"],
     input[id="tab3"]:checked ~ .btn label[for="tab3"] {
       background-color: crimson;
+    }
+    input[id="tab1"]:checked ~ .heading .text1,
+    input[id="tab2"]:checked ~ .heading .text2,
+    input[id="tab3"]:checked ~ .heading .text3 {
+      transform: translateY(0);
+      transition-delay: 0.5s;
+      opacity: 1;
+    }
+    .text1,
+    .text2,
+    .text3 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: crimson;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+      padding-top: 15px;
+      box-sizing: border-box;
+      transform: translateY(-50px);
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .text1 span,
+    .text2 span,
+    .text3 span {
+      font-size: 20px;
+      display: block;
+      margin-top: 5px;
+    }
+    .text2 {
+      background-color: dodgerblue;
+    }
+    .text3 {
+      background-color: yellowgreen;
     }
   </style>
   <body>
@@ -83,6 +125,11 @@
         <a href="#none3">
           <img src="http://placekitten.com/300/300" alt="kitty" />
         </a>
+      </div>
+      <div class="heading">
+        <div class="text1">Sale <span>50%</span></div>
+        <div class="text2">Sale <span>40%</span></div>
+        <div class="text3">Sale <span>30%</span></div>
       </div>
       <div class="btn">
         <label for="tab1"></label>
