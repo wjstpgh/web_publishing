@@ -18,8 +18,8 @@
       text-decoration: none;
     }
     img {
-      width: 100%;
-      height: 100%;
+      width: 300px;
+      height: 300px;
     }
     .tab-inner {
       width: 300px;
@@ -30,20 +30,22 @@
     input[name="tabmenu"] {
       display: none;
     }
-    .content {
+    .slide {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+    .slide-inner {
+      width: 900px;
+      font-size: 0;
       position: absolute;
-      width: 100%;
       top: 0;
-      left: -50px;
-      opacity: 0;
-      visibility: hidden;
-      transition: 1s;
+      left: 0;
+      transition: 0.5s;
     }
     .btn {
-      position: absolute;
       text-align: center;
-      width: 100%;
-      bottom: 0;
+      margin-top: 10px;
     }
     .btn label {
       background-color: lightgray;
@@ -53,12 +55,14 @@
       border-radius: 50%;
       cursor: pointer;
     }
-    input[id="tab1"]:checked ~ .slide1,
-    input[id="tab2"]:checked ~ .slide2,
-    input[id="tab3"]:checked ~ .slide3 {
-      opacity: 1;
+    input[id="tab1"]:checked ~ .slide .slide-inner {
       left: 0;
-      visibility: visible;
+    }
+    input[id="tab2"]:checked ~ .slide .slide-inner {
+      left: -300px;
+    }
+    input[id="tab3"]:checked ~ .slide .slide-inner {
+      left: -600px;
     }
     input[id="tab1"]:checked ~ .btn label[for="tab1"],
     input[id="tab2"]:checked ~ .btn label[for="tab2"],
@@ -111,20 +115,18 @@
       <input type="radio" name="tabmenu" id="tab1" checked />
       <input type="radio" name="tabmenu" id="tab2" />
       <input type="radio" name="tabmenu" id="tab3" />
-      <div class="content slide1">
-        <a href="#none1">
-          <img src="http://placekitten.com/200/200" alt="kitty" />
-        </a>
-      </div>
-      <div class="content slide2">
-        <a href="#none2">
-          <img src="http://placekitten.com/400/400" alt="kitty" />
-        </a>
-      </div>
-      <div class="content slide3">
-        <a href="#none3">
-          <img src="http://placekitten.com/300/300" alt="kitty" />
-        </a>
+      <div class="slide">
+        <div class="slide-inner">
+          <a href="#none1">
+            <img src="http://placekitten.com/200/200" alt="kitty" />
+          </a>
+          <a href="#none2">
+            <img src="http://placekitten.com/400/400" alt="kitty" />
+          </a>
+          <a href="#none3">
+            <img src="http://placekitten.com/300/300" alt="kitty" />
+          </a>
+        </div>
       </div>
       <div class="heading">
         <div class="text1">Sale <span>50%</span></div>
