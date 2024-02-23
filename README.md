@@ -1,2 +1,2 @@
-# web_publishing
+# web_publishing.
 web publishing study
