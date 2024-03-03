@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .gnb {
+      font-size: 30px;
+    }
+    .gnb a {
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .gnb a::before {
+      position: absolute;
+      content: "";
+      background-color: crimson;
+      height: 2px;
+      width: 0;
+      bottom: 0;
+      transition: 0.3s;
+    }
+    .gnb a:hover::before {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="gnb">
+      <a href="#none">Hover Effect</a>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
