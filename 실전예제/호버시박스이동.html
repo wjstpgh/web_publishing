@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+      line-height: 40px;
+    }
+    .gnb a {
+      width: 300px;
+      height: 40px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .gnb a::before,
+    .gnb a::after {
+      content: attr(data-text);
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      text-align: center;
+      color: #fff;
+      text-transform: capitalize;
+      transition: 0.3s;
+    }
+    .gnb a::before {
+      background-color: crimson;
+      top: 0;
+    }
+    .gnb a::after {
+      background-color: royalblue;
+      top: 100%;
+    }
+    .gnb a:hover::before {
+      top: -100%;
+    }
+    .gnb a:hover::after {
+      top: 0;
+    }
+  </style>
+  <body>
+    <div class="gnb">
+      <a href="#none" data-text="Hover Navigation"></a>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
