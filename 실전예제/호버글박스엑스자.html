@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    body {
+      line-height: 1.5em;
+      font-weight: 300;
+      background-color: #34465d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .gnb a {
+      text-transform: uppercase;
+      position: relative;
+      width: 450px;
+      display: block;
+      text-align: center;
+      padding: 15px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+    .gnb a::before,
+    .gnb a::after {
+      content: "";
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.05);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: 1px solid #7e7e7e;
+      transition: 0.3s;
+    }
+    .gnb a:hover {
+      letter-spacing: 6px;
+    }
+    .gnb a:hover::before {
+      transform: rotate(45deg);
+      background-color: transparent;
+    }
+    .gnb a:hover::after {
+      transform: rotate(-45deg);
+      background-color: transparent;
+    }
+  </style>
+  <body>
+    <div class="gnb">
+      <a href="#none">Lorem, ipsum dolor</a>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
