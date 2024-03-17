@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    .custom input[type="checkbox"] {
+      display: none;
+    }
+    .custom label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .custom label svg {
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      background-color: white;
+      padding: 2px;
+      border-radius: 20%;
+      transition: 0.5s;
+    }
+    .custom input[type="checkbox"]:checked + label svg {
+      background-color: rgba(100, 100, 255, 0.5);
+    }
+    .grade input[type="radio"] {
+      display: none;
+    }
+    .grade label {
+      cursor: pointer;
+    }
+    .grade label em {
+      border: 2px solid rgba(255, 60, 60, 0.4);
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      border-radius: 100%;
+      transition: 0.5s;
+    }
+    .grade input[type="radio"]:checked + label {
+      color: rgba(255, 60, 60, 1);
+    }
+    .grade input[type="radio"]:checked + label em {
+      background-color: rgba(255, 60, 60, 0.7);
+    }
+  </style>
+  <body>
+    <div class="custom">
+      <input type="checkbox" id="chk" />
+      <label for="chk">
+        <svg
+          role="graphics-symbol"
+          viewBox="0 0 14 14"
+          class="check"
+          style="
+            width: 12px;
+            height: 12px;
+            display: block;
+            fill: white;
+            flex-shrink: 0;
+          "
+        >
+          <polygon
+            points="5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039"
+          ></polygon>
+        </svg>
+        약관을 충분히 이해하였으며 동의합니다.
+      </label>
+    </div>
+    <br />
+    <div class="grade">
+      <input type="radio" name="grade" id="grade-chk1" />
+      <label for="grade-chk1">
+        <em></em>
+        초등학생
+      </label>
+      <input type="radio" name="grade" id="grade-chk2" />
+      <label for="grade-chk2">
+        <em></em>
+        중학생
+      </label>
+      <input type="radio" name="grade" id="grade-chk3" />
+      <label for="grade-chk3">
+        <em></em>
+        고등학생
+      </label>
+      <input type="radio" name="grade" id="grade-chk4" />
+      <label for="grade-chk4">
+        <em></em>
+        대학생
+      </label>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
