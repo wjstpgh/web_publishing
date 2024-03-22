@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    form input[type="checkbox"] {
+      display: none;
+    }
+    form label {
+      display: block;
+    }
+    form label::before {
+      content: "\f00c";
+      font-family: fontawesome;
+      border: 1px solid #333;
+      width: 17px;
+      height: 17px;
+      border-radius: 3px;
+      margin-right: 5px;
+      font-size: 13px;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: center;
+      line-height: 17px;
+      color: transparent;
+      transition: 0.2s;
+    }
+    form input[type="checkbox"]:checked + label::before {
+      color: #fff;
+      background-color: crimson;
+      border-color: transparent;
+    }
+    form input[type="checkbox"] + label:active:before {
+      transform: scale(0.3);
+    }
+  </style>
+  <body>
+    <form>
+      <input type="checkbox" id="chk1" checked />
+      <label for="chk1">나</label>
+      <input type="checkbox" id="chk2" />
+      <label for="chk2">너</label>
+      <input type="checkbox" id="chk3" />
+      <label for="chk3">니</label>
+      <input type="checkbox" id="chk4" />
+      <label for="chk4">우리</label>
+    </form>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script
+      src="https://kit.fontawesome.com/77ad8525ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
