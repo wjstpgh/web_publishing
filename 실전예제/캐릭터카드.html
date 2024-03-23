@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    img {
+      width: 300px;
+      height: 400px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      margin: 10px;
+      position: relative;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      transition: 0.5s;
+      border-radius: 3%;
+    }
+    .content {
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 100%;
+      left: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #fff;
+      text-align: center;
+      padding-top: 150px;
+      transition: 0.5s;
+    }
+    .card:nth-child(1) .content {
+      background: linear-gradient(to top, black, transparent);
+    }
+    .card:nth-child(2) .content {
+      background: linear-gradient(to top, dodgerblue, transparent);
+    }
+    .card:nth-child(3) .content {
+      background: linear-gradient(to top, crimson, transparent);
+    }
+    .content h2 {
+      font-size: 30px;
+    }
+    .content h2 span {
+      display: block;
+      font-size: 14px;
+      color: gold;
+      margin-top: 10px;
+    }
+    .sns a {
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      font-size: 13px;
+      text-align: center;
+      line-height: 20px;
+    }
+    .card:hover .content {
+      top: 0;
+    }
+    .card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="../img/0.jpg" alt="kitty" />
+        <div class="content">
+          <h2>무림<span>고수</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem
+            qui quod tempore odit ipsam, suscipit vitae est velit illo.
+          </p>
+          <div class="sns">
+            <a href="#none">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#none">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#none">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../img/7.jpg" alt="kitty" />
+        <div class="content">
+          <h2>육상<span>선수</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem
+            qui quod tempore odit ipsam, suscipit vitae est velit illo.
+          </p>
+          <div class="sns">
+            <a href="#none">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#none">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#none">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../img/2.jpg" alt="kitty" />
+        <div class="content">
+          <h2>부자<span>뱀파이어</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem
+            qui quod tempore odit ipsam, suscipit vitae est velit illo.
+          </p>
+          <div class="sns">
+            <a href="#none">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#none">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#none">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script
+      src="https://kit.fontawesome.com/77ad8525ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
