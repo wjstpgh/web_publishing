@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    .testimonail-section {
+      width: 800px;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .testimonail-section h1 {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    .testimonail-section h1 span {
+      color: crimson;
+    }
+    .testimonial-pic img {
+      width: 100px;
+      filter: grayscale(1);
+      margin: 5px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .testimonial-pic img.active {
+      border-radius: 50%;
+      filter: grayscale(0);
+    }
+    .testimonail .content {
+      display: none;
+    }
+    .testimonail .content.active {
+      display: block;
+    }
+    .testimonail .content p:nth-child(2) {
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div class="testimonail-section">
+      <h1><span>Main</span> Title</h1>
+      <div class="testimonial-pic">
+        <img class="active" src="/img/0.jpg" alt="" data-alt="tab1" />
+        <img src="/img/5.jpg" alt="" data-alt="tab2" />
+        <img src="/img/2.jpg" alt="" data-alt="tab3" />
+        <img src="/img/3.jpg" alt="" data-alt="tab4" />
+      </div>
+      <div class="testimonail">
+        <div id="tab1" class="content active">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio
+            dolore inventore alias iste, atque earum error id. Et, labore.
+            Numquam corporis, rerum eos est perspiciatis sunt itaque quos
+            doloremque deleniti.
+          </p>
+          <p>Name1</p>
+        </div>
+        <div id="tab2" class="content">
+          <p>
+            dolore inventore alias iste, atque earum error id. Et, labore.
+            doloremque deleniti. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Distinctio Numquam corporis, rerum eos est
+            perspiciatis sunt itaque quos
+          </p>
+          <p>Name2</p>
+        </div>
+        <div id="tab3" class="content">
+          <p>
+            Numquam corporis, rerum eos est perspiciatis sunt itaque quos Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Distinctio
+            doloremque deleniti. dolore inventore alias iste, atque earum error
+            id. Et, labore.
+          </p>
+          <p>Name3</p>
+        </div>
+        <div id="tab4" class="content">
+          <p>
+            doloremque deleniti. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Distinctio Numquam corporis, rerum eos est
+            perspiciatis sunt itaque quos dolore inventore alias iste, atque
+            earum error id. Et, labore.
+          </p>
+          <p>Name4</p>
+        </div>
+      </div>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script>
+      $(".testimonial-pic img").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".testimonail .content").removeClass("active");
+        $("#" + $(this).attr("data-alt")).addClass("active");
+      });
+    </script>
+  </body>
+</html>
