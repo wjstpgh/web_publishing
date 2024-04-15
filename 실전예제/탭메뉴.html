@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    section {
+      border: 1px solid #000;
+      width: 800px;
+    }
+    .btn {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .btn li {
+      float: left;
+      background-color: gray;
+      cursor: pointer;
+    }
+    .btn li.active {
+      background-color: #fff;
+    }
+    .tabs {
+    }
+    .tabs div {
+      height: 200px;
+      display: none;
+    }
+    .tabs div.active {
+      display: block;
+    }
+  </style>
+  <body>
+    <section>
+      <ul class="btn">
+        <li data-alt="tab1" class="active">HTML</li>
+        <li data-alt="tab2">CSS</li>
+        <li data-alt="tab3">JQUERY</li>
+        <li data-alt="tab4">JS</li>
+        <li data-alt="tab5">FRAMEWORKS</li>
+      </ul>
+      <div class="tabs">
+        <div id="tab1" class="active">tab1</div>
+        <div id="tab2">tab2</div>
+        <div id="tab3">tab3</div>
+        <div id="tab4">tab4</div>
+        <div id="tab5">tab5</div>
+      </div>
+    </section>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script>
+      $(".btn li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        var tab = $(this).attr("data-alt");
+        $("#" + tab).addClass("active");
+        $("#" + tab)
+          .siblings()
+          .removeClass("active");
+      });
+    </script>
+  </body>
+</html>
