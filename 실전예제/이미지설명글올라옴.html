@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-weight: normal;
+      background-color: #eee;
+    }
+    .item {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .item img {
+      width: 400px;
+      height: 600px;
+    }
+    .detail {
+      background-color: #f8f8f8;
+      position: absolute;
+      width: 100%;
+      bottom: -200px;
+      left: 0;
+      height: 50%;
+      transition: 0.5s;
+    }
+    .item:hover .detail {
+      bottom: 0;
+    }
+  </style>
+  <body>
+    <div class="item">
+      <img src="../img/8.jpg" alt="" />
+      <div class="detail"></div>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
