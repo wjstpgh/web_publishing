@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <script
+    src="https://kit.fontawesome.com/77ad8525ff.js"
+    crossorigin="anonymous"
+  ></script>
   <style>
     a {
       color: #222;
@@ -33,17 +37,146 @@
       width: 100%;
       bottom: -200px;
       left: 0;
-      height: 50%;
+      height: 270px;
       transition: 0.5s;
+      padding: 5px 20px;
+      box-sizing: border-box;
     }
     .item:hover .detail {
       bottom: 0;
+    }
+    .title {
+      border-bottom: 1px solid #ddd;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    .title h2 {
+      font-size: 16px;
+      color: #888;
+      line-height: 1.2em;
+      float: left;
+    }
+    .title h2 em {
+      font-style: normal;
+      display: block;
+      margin-bottom: 5px;
+      color: #000;
+    }
+    .title span {
+      float: right;
+      margin-top: 15px;
+      font-size: 18px;
+      color: crimson;
+    }
+    .info {
+      position: relative;
+    }
+    .size {
+      margin-bottom: 10px;
+    }
+    .size label,
+    .color label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .size span {
+      font-size: 12px;
+      margin-right: 5px;
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      text-align: center;
+      line-height: 15px;
+      padding: 3px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .size span.active {
+      color: #fff;
+      background-color: #000;
+    }
+    .color span {
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+    .color span.active {
+      border-radius: 50%;
+    }
+    .color span:nth-of-type(1) {
+      background-color: #808000;
+    }
+    .color span:nth-of-type(2) {
+      background-color: #ff0000;
+    }
+    .color span:nth-of-type(3) {
+      background-color: #ffc9cb;
+    }
+    .color span:nth-of-type(4) {
+      background-color: #00ffff;
+    }
+    .color span:nth-of-type(5) {
+      background-color: #0000ff;
+    }
+    .add-cart {
+      border: 1px solid #ddd;
+      width: 100%;
+      padding: 7px;
+      background-color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .add-cart:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .like {
+      cursor: pointer;
+    }
+    .like::before {
+      content: "\f08a";
+      font-family: fontawesome;
+      color: #bbb;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .like.active::before {
+      content: "\f004";
+      color: crimson;
     }
   </style>
   <body>
     <div class="item">
       <img src="../img/8.jpg" alt="" />
-      <div class="detail"></div>
+      <div class="detail">
+        <div class="title">
+          <h2><em>댕쩌는 경찰복</em>Women's Designer Wear</h2>
+          <span>$55.99</span>
+        </div>
+        <div class="info">
+          <div class="size">
+            <label>Size</label>
+            <span>XS</span>
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+            <span>XL</span>
+          </div>
+          <div class="color">
+            <label>Colors</label>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="like"></span>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
     </div>
     <script src="script/jquery-1.12.4.js"></script>
     <script></script>
