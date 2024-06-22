@@ -26,10 +26,12 @@
       border-radius: 10px;
       overflow: hidden;
       position: relative;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
     .item img {
       width: 400px;
       height: 600px;
+      transition: 0.5s;
     }
     .detail {
       background-color: #f8f8f8;
@@ -44,6 +46,9 @@
     }
     .item:hover .detail {
       bottom: 0;
+    }
+    .item:hover img {
+      filter: blur(2px);
     }
     .title {
       border-bottom: 1px solid #ddd;
@@ -79,6 +84,10 @@
       display: block;
       margin-bottom: 5px;
     }
+    .size span,
+    .color span {
+      transition: 0.3s;
+    }
     .size span {
       font-size: 12px;
       margin-right: 5px;
@@ -91,7 +100,8 @@
       border-radius: 3px;
       cursor: pointer;
     }
-    .size span.active {
+    .size span.active,
+    .size span:hover {
       color: #fff;
       background-color: #000;
     }
@@ -179,6 +189,15 @@
       </div>
     </div>
     <script src="script/jquery-1.12.4.js"></script>
-    <script></script>
+    <script>
+      $(".size span, .color span").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+
+      $(".like").click(function () {
+        $(this).toggleClass("active");
+      });
+    </script>
   </body>
 </html>
