@@ -33,15 +33,66 @@
       width: 980px;
     }
     .heading {
+      text-align: center;
+    }
+    .heading span {
+      color: crimson;
+      font-size: 24px;
+    }
+    .heading h1 {
+      font-size: 36px;
+      margin-top: 10px;
+    }
+    .heading h1 em {
+      font-style: normal;
+      position: relative;
+    }
+    .heading h1 em::after {
+      position: absolute;
+      content: url(../img/7.jpg);
+      width: 60px;
+      height: 30px;
+      overflow: hidden;
+      top: -50%;
+      left: 50%;
     }
     .content {
     }
-    .content div {
+    .content > div {
       width: 50%;
       float: left;
+      height: 400px;
       box-sizing: border-box;
     }
     .accordion {
+    }
+    .title {
+      border: 1px solid #ddd;
+      padding: 5px;
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.3s;
+    }
+    .title::after {
+      transition: 0.3s;
+      content: "\f105";
+      font-family: fontawesome;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+    }
+    .title:hover,
+    .title.active {
+      background-color: #203049;
+      color: #fff;
+    }
+    .title.active::after {
+      transform: rotate(90deg);
+      color: orange;
+    }
+    .desc {
+      padding: 15px;
     }
     .image {
     }
@@ -50,11 +101,29 @@
     <section>
       <article>
         <div class="heading">
-          <span></span>
-          <h1></h1>
+          <span>서비스 제목</span>
+          <h1>
+            <em>카톡</em> 간편 회원가입, <b>퍼블리싱</b>의 진짜를 만나보세요.
+          </h1>
         </div>
         <div class="content">
-          <div class="accordion"></div>
+          <div class="accordion">
+            <div class="title">하드코딩 실력이 진짜 퍼블리싱이다.</div>
+            <div class="desc">
+              제이쿼리 플로그인을 사용해서 역동적이고 화려하게 꾸미는 퍼블리싱은
+              진짜 퍼블리싱이 아닙니다.
+              <br />
+              진짜 퍼블리싱 실력은 HTML로 레이아웃을 설계를 꼼꼼히 잘하고, CSS로
+              배치와 상세 디자인하고, 직접 작성한 제이쿼리로 상호작용까지 만들
+              수 있는 것이 진짜 퍼블리싱 실력입니다.
+            </div>
+            <div class="title"></div>
+            <div class="desc"></div>
+            <div class="title"></div>
+            <div class="desc"></div>
+            <div class="title"></div>
+            <div class="desc"></div>
+          </div>
           <div class="image"></div>
         </div>
       </article>
