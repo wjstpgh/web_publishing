@@ -19,9 +19,6 @@
       text-decoration: none;
     }
 
-    .video-frame {
-    }
-
     .video-frame video {
       position: fixed;
       min-width: 100%;
@@ -33,6 +30,94 @@
       position: absolute;
       top: 50px;
       left: 100px;
+    }
+
+    .heading {
+      position: absolute;
+      width: 700px;
+      left: 100px;
+      bottom: 100px;
+      animation: showing1 2s 1s linear;
+      animation-fill-mode: both;
+    }
+    .heading h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+    .heading h1 span {
+      display: block;
+      color: crimson;
+    }
+    .heading p {
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+    .btn-book,
+    .btn-learn {
+      background-color: #fff;
+      color: #222;
+      text-transform: uppercase;
+      width: 150px;
+      display: inline-block;
+      text-align: center;
+      padding: 7px;
+      border-radius: 20px;
+      margin-right: 5px;
+      border: 2px solid #fff;
+      transition: 0.3s;
+    }
+    .btn-learn {
+      background-color: transparent;
+      color: #fff;
+    }
+    .btn-book:hover {
+      background-color: #000;
+      color: #fff;
+      border-color: #000;
+    }
+    .btn-learn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .anniversary {
+      position: absolute;
+      right: 100px;
+      bottom: 50px;
+      color: #000;
+      text-align: center;
+      animation: showing2 2s 1s linear;
+      animation-fill-mode: both;
+    }
+    .anniversary em {
+      display: block;
+      font-style: normal;
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin-bottom: -20px;
+    }
+    .anniversary span {
+      font-family: "Monoton", sans-serif;
+      font-size: 150px;
+    }
+    @keyframes showing1 {
+      0% {
+        opacity: 0;
+        margin-left: -100px;
+      }
+      100% {
+        opacity: 1;
+        margin-left: 0;
+      }
+    }
+    @keyframes showing2 {
+      0% {
+        opacity: 0;
+        margin-right: -100px;
+      }
+      100% {
+        opacity: 1;
+        margin-right: 0;
+      }
     }
   </style>
   <body>
@@ -49,6 +134,21 @@
 
       <div class="logo">
         <img src="../resource/logo.png" alt="logo" />
+      </div>
+      <div class="heading">
+        <h1><span>Wave Ocean</span>The World's Ocean</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
+          soluta cupiditate consequatur, odio similique amet consequuntur earum
+          vitae explicabo itaque quam hic debitis voluptas dicta optio error
+          numquam veritatis veniam!
+        </p>
+        <a href="#none" class="btn-book">Book Now</a>
+        <a href="#none" class="btn-learn">Learn More</a>
+      </div>
+      <div class="anniversary">
+        <em>Anniversary</em>
+        <span>60</span>
       </div>
     </div>
     <script src="script/jquery-1.12.4.js"></script>
