@@ -125,17 +125,17 @@
     .trigger span:nth-child(3) {
       top: 100%;
     }
-    .trigger:active span {
+    .trigger.active span {
       background-color: #fff;
     }
-    .trigger:active span:nth-child(1) {
+    .trigger.active span:nth-child(1) {
       top: 50%;
       transform: rotate(45deg);
     }
-    .trigger:active span:nth-child(2) {
+    .trigger.active span:nth-child(2) {
       opacity: 0;
     }
-    .trigger:active span:nth-child(3) {
+    .trigger.active span:nth-child(3) {
       top: 50%;
       transform: rotate(-45deg);
     }
@@ -161,9 +161,27 @@
       padding: 10px;
       transition: 0.3s;
       font-family: "Raleway", sans-serif;
+      animation: gnb 0.5s linear;
+      animation-fill-mode: both;
+      opacity: 0;
     }
     .gnb a:hover {
       color: crimson;
+    }
+    .gnb a:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    .gnb a:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+    .gnb a:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+    .gnb a:nth-child(4) {
+      animation-delay: 1.1s;
+    }
+    .gnb a:nth-child(5) {
+      animation-delay: 1.3s;
     }
     @keyframes showing1 {
       0% {
@@ -183,6 +201,16 @@
       100% {
         opacity: 1;
         margin-right: 0;
+      }
+    }
+    @keyframes gnb {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   </style>
@@ -232,6 +260,11 @@
       </div>
     </div>
     <script src="script/jquery-1.12.4.js"></script>
-    <script></script>
+    <script>
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        $(".modal-gnb").fadeToggle();
+      });
+    </script>
   </body>
 </html>
