@@ -19,6 +19,15 @@
       text-decoration: none;
     }
 
+    .video-frame::before {
+      content: "";
+      background: linear-gradient(-135deg, crimson, transparent);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
     .video-frame video {
       position: fixed;
       min-width: 100%;
@@ -259,12 +268,18 @@
         </div>
       </div>
     </div>
+
+    <audio id="myAudio" src="../resource/piano-bgm.mp3" autoplay loop></audio>
+
     <script src="script/jquery-1.12.4.js"></script>
     <script>
       $(".trigger").click(function () {
         $(this).toggleClass("active");
         $(".modal-gnb").fadeToggle();
       });
+
+      var bgm = document.getElementById("myAudio");
+      bgm.volume = 0.2;
     </script>
   </body>
 </html>
