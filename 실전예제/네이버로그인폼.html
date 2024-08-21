@@ -10,6 +10,54 @@
       color: #222;
       text-decoration: none;
     }
+    .container {
+    }
+    header {
+      border-bottom: 1px solid lightgray;
+      background-color: #fff;
+      height: 60px;
+      text-align: center;
+      padding-top: 15px;
+      box-sizing: border-box;
+    }
+    header img {
+      width: 80px;
+    }
+    section {
+      height: calc(100vh - 60px);
+      position: relative;
+    }
+    .login {
+      width: 360px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .login-type {
+    }
+    .login-type h1 {
+      margin-top: 0;
+      font-size: 38px;
+      text-align: center;
+      font-weight: normal;
+    }
+    .btn {
+      border: 1px solid lightgray;
+      display: block;
+      text-align: center;
+      padding: 15px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .or-text {
+    }
+    .login-footer {
+    }
+    .login-footer p {
+    }
+    .login-footer p a {
+    }
   </style>
   <body>
     <div class="container">
@@ -22,12 +70,12 @@
         <div class="login">
           <div class="login-type">
             <h1>로그인</h1>
-            <a href="#none">휴대폰 번호로 로그인</a>
+            <a class="btn" href="#none">휴대폰 번호로 로그인</a>
             <span class="or-text">또는</span>
-            <a href="#none">이메일로 로그인</a>
-            <a href="#none">네이버로 로그인</a>
-            <a href="#none">페이스북으로 로그인</a>
-            <a href="#none">라인으로 로그인</a>
+            <a class="btn" href="#none">이메일로 로그인</a>
+            <a class="btn" href="#none">네이버로 로그인</a>
+            <a class="btn" href="#none">페이스북으로 로그인</a>
+            <a class="btn" href="#none">라인으로 로그인</a>
           </div>
           <div class="login-footer">
             <input type="checkbox" /> 로그인 상태 유지
