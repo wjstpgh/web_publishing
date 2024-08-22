@@ -25,6 +25,7 @@
     }
     section {
       height: calc(100vh - 60px);
+      background-color: #eee;
       position: relative;
     }
     .login {
@@ -49,14 +50,41 @@
       padding: 15px;
       border-radius: 3px;
       margin-bottom: 10px;
+      font-size: 18px;
+      color: #fff;
+      opacity: 0.8;
+    }
+    .btn:hover {
+      opacity: 1;
+    }
+    .btn:nth-of-type(1) {
+      color: #222;
+      background: #fff url(../img/3.jpg) no-repeat center left 5% / 30px 40px;
+    }
+    .btn:nth-of-type(2) {
+      background: #898c9b url(../img/5.jpg) no-repeat center left 5% / 30px 40px;
+    }
+    .btn:nth-of-type(3) {
+      background: #11ce00 url(../img/7.jpg) no-repeat center left 5% / 30px 40px;
+    }
+    .btn:nth-of-type(4) {
+      background: #0076fe url(../img/8.jpg) no-repeat center left 5% / 30px 40px;
+    }
+    .btn:nth-of-type(5) {
+      background: #00c026 url(../img/6.jpg) no-repeat center left 5% / 30px 40px;
     }
     .or-text {
     }
     .login-footer {
     }
     .login-footer p {
+      text-align: center;
     }
     .login-footer p a {
+      font-weight: normal;
+    }
+    .login-footer p a:hover {
+      text-decoration: underline;
     }
   </style>
   <body>
@@ -78,7 +106,8 @@
             <a class="btn" href="#none">라인으로 로그인</a>
           </div>
           <div class="login-footer">
-            <input type="checkbox" /> 로그인 상태 유지
+            <input type="checkbox" id="chk" />
+            <label for="chk"> 로그인 상태 유지 </label>
             <p>
               밴드가 처음이신가요?
               <a href="#none">회원가입</a>
