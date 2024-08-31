@@ -19,6 +19,9 @@
       width: 100%;
       display: none;
     }
+    .modal.active {
+      display: block;
+    }
     .modal-content {
       background-color: #fff;
       width: 350px;
@@ -30,6 +33,7 @@
       padding: 30px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
       text-align: center;
+      animation: slidefade 0.3s linear;
     }
     .modal-content img {
       width: 300px;
@@ -46,6 +50,16 @@
       font-size: 14px;
       padding: 7px;
       display: block;
+    }
+    @keyframes slidefade {
+      0% {
+        opacity: 0;
+        margin-top: -50px;
+      }
+      100% {
+        opacity: 1;
+        margin-top: 0;
+      }
     }
   </style>
   <body>
@@ -66,10 +80,10 @@
     <script src="script/jquery-1.12.4.js"></script>
     <script>
       $(".modal-notice").click(function () {
-        $(".modal").fadeIn();
+        $(".modal").addClass("active");
       });
       $(".btn-close").click(function () {
-        $(".modal").fadeOut();
+        $(".modal").removeClass("active");
       });
     </script>
   </body>
