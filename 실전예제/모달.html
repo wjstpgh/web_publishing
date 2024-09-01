@@ -63,10 +63,12 @@
     }
   </style>
   <body>
-    <a class="modal-notice" href="#none">Open Fade-In Modal with jQuery</a>
-    <div class="modal">
+    <a class="modal-notice" href="#none" onclick="openModal();"
+      >Open Fade-In Modal with jQuery</a
+    >
+    <div id="modal-notice" class="modal">
       <div class="modal-content">
-        <a href="#none" class="btn-close">X</a>
+        <a href="#none" class="btn-close" onclick="closeModal();">X</a>
         <h2>Welcome to Teams!</h2>
         <img src="../img/4.jpg" alt="" />
         <p>
@@ -77,14 +79,24 @@
         <a class="btn-guide" href="#none">Open Guide</a>
       </div>
     </div>
-    <script src="script/jquery-1.12.4.js"></script>
-    <script>
+    <!-- <script src="script/jquery-1.12.4.js"></script> -->
+    <!-- <script>
       $(".modal-notice").click(function () {
         $(".modal").addClass("active");
       });
       $(".btn-close").click(function () {
         $(".modal").removeClass("active");
       });
+    </script> -->
+    <script>
+      let modal = document.getElementById("modal-notice");
+
+      function openModal() {
+        modal.classList.add("active");
+      }
+      function closeModal() {
+        modal.classList.remove("active");
+      }
     </script>
   </body>
 </html>
