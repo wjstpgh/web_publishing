@@ -61,14 +61,18 @@
         margin-top: 0;
       }
     }
+    .modal:target {
+      display: block;
+    }
   </style>
   <body>
-    <a class="modal-notice" href="#none" onclick="openModal();"
-      >Open Fade-In Modal with jQuery</a
+    <!-- onclick="openModal();" -->
+    <a class="modal-notice" href="#modal-notice"
+      >Open Fade-In Modal with :target</a
     >
     <div id="modal-notice" class="modal">
       <div class="modal-content">
-        <a href="#none" class="btn-close" onclick="closeModal();">X</a>
+        <a href="#" class="btn-close" onclick="closeModal();">X</a>
         <h2>Welcome to Teams!</h2>
         <img src="../img/4.jpg" alt="" />
         <p>
@@ -88,7 +92,7 @@
         $(".modal").removeClass("active");
       });
     </script> -->
-    <script>
+    <!-- <script>
       let modal = document.getElementById("modal-notice");
 
       function openModal() {
@@ -97,6 +101,6 @@
       function closeModal() {
         modal.classList.remove("active");
       }
-    </script>
+    </script> -->
   </body>
 </html>
