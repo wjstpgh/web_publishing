@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/77ad8525ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    body {
+      line-height: 1.5em;
+    }
+    .html-accordion {
+      width: 600px;
+      margin: 50px auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      padding: 40px 20px;
+      border-radius: 10px;
+    }
+    .html-accordion h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    details {
+      padding: 0.5em 1em;
+    }
+    details summary {
+      list-style: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    details[open] summary {
+      font-weight: bold;
+    }
+    details summary::after {
+      content: "\f107";
+      font-family: fontawesome;
+      float: right;
+    }
+    details[open] summary::after {
+      transform: rotateX(180deg);
+    }
+    .detail-content {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .details-content p {
+      margin: 0;
+    }
+  </style>
+  <body>
+    <div class="html-accordion">
+      <h1>FAQ Examples with HTML</h1>
+      <details open>
+        <summary>
+          Q) Use service data to identify your most common questions.
+        </summary>
+        <div class="detail-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea,
+          itaque excepturi maxime quis autem sit nisi! Possimus harum minima,
+          repellat eos quia inventore! Nam facilis quam nostrum aperiam quasi.
+        </div>
+      </details>
+      <details>
+        <summary>Q)Includes space for live support options.</summary>
+        <div class="detail-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea,
+          itaque excepturi maxime quis autem sit nisi! Possimus harum minima,
+          repellat eos quia inventore! Nam facilis quam nostrum aperiam quasi.
+        </div>
+      </details>
+      <details>
+        <summary>Q)Showcases expertise, trust, and authority within</summary>
+        <div class="detail-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea,
+          itaque excepturi maxime quis autem sit nisi! Possimus harum minima,
+          repellat eos quia inventore! Nam facilis quam nostrum aperiam quasi.
+        </div>
+      </details>
+      <details>
+        <summary>Q)Update content and add more solutions over time.</summary>
+        <div class="detail-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea,
+          itaque excepturi maxime quis autem sit nisi! Possimus harum minima,
+          repellat eos quia inventore! Nam facilis quam nostrum aperiam quasi.
+        </div>
+      </details>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
