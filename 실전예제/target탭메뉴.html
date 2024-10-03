@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    .tab-inner {
+      width: 700px;
+      margin: 50px auto;
+    }
+    .tab-btn a {
+      background-color: #000;
+      color: #fff;
+      display: inline-block;
+      width: 150px;
+      text-align: center;
+      padding: 10px;
+      margin-right: -2px;
+      font-weight: 500;
+      text-transform: uppercase;
+      border-top: 3px solid transparent;
+      transition: 0.3s;
+    }
+    .tab-btn a.active {
+      background-color: #fff;
+      color: royalblue;
+      border-top: 3px solid royalblue;
+    }
+    .tab-content {
+      position: relative;
+    }
+    .tab {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+      background-color: #fff;
+      padding: 25px;
+    }
+    .tab h2 {
+      text-transform: uppercase;
+    }
+    .tab img {
+      width: 100%;
+    }
+    .tab:target {
+      opacity: 1;
+      visibility: visible;
+    }
+    .tab:nth-child(1) {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+  <body>
+    <div class="tab-inner">
+      <div class="tab-btn">
+        <a href="#tab1"><i class="bi bi-emoji-smile-fill"></i>london</a>
+        <a href="#tab2"><i class="bi bi-chat-dots-fill"></i>paris</a>
+        <a href="#tab3"><i class="bi bi-camera-fill"></i>new york</a>
+        <a href="#tab4"><i class="bi bi-heart-fill"></i>dubai</a>
+      </div>
+      <div class="tab-content">
+        <div id="tab1" class="tab">
+          <h2>london</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt
+            tempora eius quas rem libero in animi dolor doloremque. Quaerat
+            autem quidem quisquam hic culpa illum, nihil vitae architecto
+            voluptatum.
+          </p>
+          <img src="/img/3.jpg" alt="" />
+        </div>
+        <div id="tab2" class="tab">
+          <h2>paris</h2>
+          <p>
+            tempora eius quas rem libero in animi dolor doloremque. Quaerat
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt
+            autem quidem quisquam hic culpa illum, nihil vitae architecto
+            voluptatum.
+          </p>
+          <img src="/img/4.jpg" alt="" />
+        </div>
+        <div id="tab3" class="tab">
+          <h2>new york</h2>
+          <p>
+            autem quidem quisquam hic culpa illum, nihil vitae architecto Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quod sunt tempora
+            eius quas rem libero in animi dolor doloremque. Quaerat voluptatum.
+          </p>
+          <img src="/img/5.jpg" alt="" />
+        </div>
+        <div id="tab4" class="tab">
+          <h2>dubai</h2>
+          <p>
+            tempora eius quas rem libero in animi dolor doloremque. Quaerat
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt
+            voluptatum. autem quidem quisquam hic culpa illum, nihil vitae
+            architecto
+          </p>
+          <img src="/img/8.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script>
+      $(".tab-btn a").click(function () {
+        $(this).addClass("active");
+        $(this).siblings(".tab-btn a").removeClass("active");
+      });
+    </script>
+  </body>
+</html>
