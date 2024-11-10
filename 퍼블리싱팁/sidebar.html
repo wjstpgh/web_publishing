@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script
+    src="https://kit.fontawesome.com/77ad8525ff.js"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    input[id="trigger"] {
+      display: none;
+    }
+    label[for="trigger"] {
+      width: 30px;
+      height: 20px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      transition: 0.3s;
+    }
+    label[for="trigger"] span {
+      display: block;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      transition: 0.5s;
+      z-index: 9999;
+    }
+    label[for="trigger"] span:nth-child(1) {
+      top: 0;
+    }
+    label[for="trigger"] span:nth-child(2) {
+      top: 50%;
+    }
+    label[for="trigger"] span:nth-child(3) {
+      top: 100%;
+    }
+    input[id="trigger"]:checked + label span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    input[id="trigger"]:checked + label span:nth-child(2) {
+      opacity: 0;
+    }
+    input[id="trigger"]:checked + label span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      transition: 0.3s;
+    }
+    input[id="trigger"]:checked ~ .sidebar {
+      left: 0;
+    }
+    input[id="trigger"]:checked + label {
+      left: 270px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <input type="checkbox" id="trigger" />
+      <label for="trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="sidebar"></div>
+    </div>
+
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
