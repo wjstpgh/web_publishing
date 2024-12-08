@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+    span {
+      border: 1px solid #000;
+      width: 4000px;
+      height: 1000px;
+      margin: 20px;
+    }
+    div {
+      border: 1px solid red;
+      margin: 20px;
+      width: 300px;
+      height: 50px;
+    }
+    img {
+      margin: 20px;
+      width: 300px;
+      height: 300px;
+    }
+    h1 {
+      border: 1px solid blue;
+      display: inline-block;
+    }
+    .absolute {
+      position: absolute;
+      margin: 20px;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+  <body>
+    <span>Inline Elements...Span</span>
+    <span>인라인은 너비높이 불가</span>
+    <span>인라인은 상하마진은 불가</span>
+
+    <div>Block Element...Div</div>
+    <div>블록은 너비높이 마진 모두 가능</div>
+
+    <img src="/img/5.jpg" alt="" />
+    <img src="/img/5.jpg" alt="" />
+
+    <h1>
+      인라인 블록 은 기본적으로 블록처럼 동작하지만 너비높이가 기본 인라인과
+      같다
+    </h1>
+
+    <span class="absolute">
+      포지션 absolute는 display를 inline-block으로 변경한다.
+    </span>
+
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
