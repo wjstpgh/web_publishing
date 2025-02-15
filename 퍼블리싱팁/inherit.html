@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    .parent {
+      border: 5px solid #000;
+      width: 400px;
+      height: 200px;
+      background-color: yellowgreen;
+      color: red;
+    }
+    .child {
+      background-color: blue;
+      height: inherit;
+    }
+    .parent img {
+      width: inherit;
+      height: inherit;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <div class="child">inherit자식요소</div>
+
+      <img src="../img/0.jpg" alt="" />
+    </div>
+
+    <script src="script/jquery-1.12.4.js"></script>
+    <script></script>
+  </body>
+</html>
